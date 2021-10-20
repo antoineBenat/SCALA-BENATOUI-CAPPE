@@ -10,10 +10,9 @@ object Main {
     val request: HttpResponse[String] = Http("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=DAI.DEX&outputsize=full&datatype=json&apikey=EXALLWIOROD5BP80").param("q","monkeys").asString
     val json : JsValue  = Json.parse(request.body)
     val now = Calendar.getInstance()
-
+    val names: List[String] = List("1. open","2. high","3. low","4. close","5. volume");
     val allElement = Array.ofDim[Any](500,1)
     var index =0;
-    //val gle : Array[String] =new Array[String](request.body.size);
     for( x <-0 to 500) {
       now.set(2021,10,12)
       val element: Array[Any] = new Array[Any](6);
@@ -30,25 +29,26 @@ object Main {
         index=index+1
       }catch{
         case exception: Exception=>{
-
         }
       }
     }
-/*
+
     //Affichage de la liste compléte
    var x=0
     while (allElement(x).mkString(",") != "null") {
       println(allElement(x).mkString(","))
       x+=1
-    }*/
-    val i = allElement(3)(4).asInstanceOf[Double].toInt
-    println(i+1)
-    println(i)
+    }
 
-    def toInt(anyVal: Any): Int ={
-      val i = anyVal.asInstanceOf[Double].toInt
+    //Fonction permettant de récupérer un Int depuis un "Any"
+    def toInt(any: Any): Int ={
+      val i = any.asInstanceOf[Double].toInt
       return i
     }
+    //Exemple de valeur pour le 4éme élément de la 3éme jourée
+    val j=toInt(allElement(3)(4))
+
+
 
 
   }
