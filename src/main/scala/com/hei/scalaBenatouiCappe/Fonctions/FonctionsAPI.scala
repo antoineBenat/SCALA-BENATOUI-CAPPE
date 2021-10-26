@@ -15,4 +15,10 @@ class FonctionsAPI {
     return i
   }
 
+  def testPrinTab(allElement: ArrayBuffer[Array[Any]]): Unit ={
+    allElement foreach {
+      println(allElement.mkString(" ", " ", " "))
+    }
+  }
+
 }
