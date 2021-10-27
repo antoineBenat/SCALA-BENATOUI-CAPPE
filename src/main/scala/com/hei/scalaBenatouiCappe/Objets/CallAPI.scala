@@ -1,5 +1,6 @@
 package com.hei.scalaBenatouiCappe.Objets
 
+import com.hei.scalaBenatouiCappe.Fonctions.FonctionsAPI
 import play.api.libs.json.{JsValue, Json}
 import scalaj.http.{Http, HttpResponse}
 
@@ -7,6 +8,8 @@ import java.util.Calendar
 import scala.collection.mutable.ArrayBuffer
 
 class CallAPI {
+
+  val fonctionsAPI= new FonctionsAPI()
   def callAPI():ArrayBuffer[Array[Any]]={
     val request: HttpResponse[String] = Http("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=DAI.DEX&outputsize=full&datatype=json&apikey=EXALLWIOROD5BP80").param("q","monkeys").asString
     val json : JsValue  = Json.parse(request.body)

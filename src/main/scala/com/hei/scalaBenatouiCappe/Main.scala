@@ -10,7 +10,8 @@ object Main {
     val fonctionsAPI: Fonctions.FonctionsAPI= new FonctionsAPI()
     val tab =  callAPI.callAPI()
 
-    print(fonctionsAPI.toDouble(tab(1)(1)))
-    fonctionsAPI.printTab(tab)
+    fonctionsAPI.testPrinTab(tab)
+    println(fonctionsAPI.toDouble(tab(1)(1)))
+
   }
 }
