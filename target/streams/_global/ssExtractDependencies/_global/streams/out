@@ -1,8 +1,8 @@
-[error] sbt.librarymanagement.ResolveException: Error downloading com.typesafe.play:play-json_2.13:2.8.8
+[error] sbt.librarymanagement.ResolveException: Error downloading org.scalanlp:com.hei.breeze-viz_2.13:2.0
 [error]   Not found
 [error]   Not found
-[error]   not found: /Users/thomascappe/.ivy2/localcom.typesafe.play/play-json_2.13/2.8.8/ivys/ivy.xml
-[error]   not found: https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.13/2.8.8/play-json_2.13-2.8.8.pom
+[error]   not found: /Users/thomascappe/.ivy2/localorg.scalanlp/com.hei.breeze-viz_2.13/2.0/ivys/ivy.xml
+[error]   download error: Caught javax.net.ssl.SSLHandshakeException: Remote host terminated the handshake (Remote host terminated the handshake) while downloading https://repo1.maven.org/maven2/org/scalanlp/com.hei.breeze-viz_2.13/2.0/com.hei.breeze-viz_2.13-2.0.pom
 [error] 	at lmcoursier.CoursierDependencyResolution.unresolvedWarningOrThrow(CoursierDependencyResolution.scala:258)
 [error] 	at lmcoursier.CoursierDependencyResolution.$anonfun$update$38(CoursierDependencyResolution.scala:227)
 [error] 	at scala.util.Either$LeftProjection.map(Either.scala:573)
@@ -33,8 +33,8 @@
 [error] 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 [error] 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 [error] 	at java.base/java.lang.Thread.run(Thread.java:829)
-[error] (ssExtractDependencies) sbt.librarymanagement.ResolveException: Error downloading com.typesafe.play:play-json_2.13:2.8.8
+[error] (ssExtractDependencies) sbt.librarymanagement.ResolveException: Error downloading org.scalanlp:com.hei.breeze-viz_2.13:2.0
 [error]   Not found
 [error]   Not found
-[error]   not found: /Users/thomascappe/.ivy2/localcom.typesafe.play/play-json_2.13/2.8.8/ivys/ivy.xml
-[error]   not found: https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.13/2.8.8/play-json_2.13-2.8.8.pom
+[error]   not found: /Users/thomascappe/.ivy2/localorg.scalanlp/com.hei.breeze-viz_2.13/2.0/ivys/ivy.xml
+[error]   download error: Caught javax.net.ssl.SSLHandshakeException: Remote host terminated the handshake (Remote host terminated the handshake) while downloading https://repo1.maven.org/maven2/org/scalanlp/com.hei.breeze-viz_2.13/2.0/com.hei.breeze-viz_2.13-2.0.pom

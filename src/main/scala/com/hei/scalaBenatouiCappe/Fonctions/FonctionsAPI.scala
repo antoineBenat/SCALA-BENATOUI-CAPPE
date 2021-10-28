@@ -30,6 +30,32 @@ class FonctionsAPI {
   }
 
   /**
+   * Enregistrement dans un ArrayBuffer des toutes les dates de la liste
+   * @param ArrayBuffer[Array[Any]]
+   * @return ArrayBuffer[String]
+   */
+  def ColDate(allElement: ArrayBuffer[Array[Any]]):ArrayBuffer[String]={
+    val listDate= ArrayBuffer[String]()
+    allElement.foreach(element=> {
+      listDate += element(0).toString;
+    })
+    return listDate
+  }
+
+  /**
+   * Enregistrement dans un ArrayBuffer des toutes les valeur de la liste pour une colonne choisie
+   * @param ArrayBuffer[Array[Any]]
+   * @return ArrayBuffer[Double]
+   */
+  def ChooseColOfDouble(allElement: ArrayBuffer[Array[Any]],nbrCol:Integer):ArrayBuffer[Double]={
+    val list= ArrayBuffer[Double]()
+    allElement.foreach(element=> {
+      list += toDouble(element(nbrCol));
+    })
+    return list
+  }
+
+  /**
    * Affichage de la liste compléte, méthode de vérification
    * @param ArrayBuffer[Array[Any]]
    * @return String
@@ -41,4 +67,5 @@ class FonctionsAPI {
     })
     return allElement(0).mkString(" ", " ", " ")
   }
+
 }

@@ -9,9 +9,13 @@ object Main {
     val callAPI: CallAPI= new CallAPI()
     val fonctionsAPI: Fonctions.FonctionsAPI= new FonctionsAPI()
     val tab =  callAPI.callAPI()
-
+    val tabDate = fonctionsAPI.ColDate(tab)
     fonctionsAPI.testPrinTab(tab)
     println(fonctionsAPI.toDouble(tab(1)(1)))
+
+    tabDate.foreach(element=> {
+      println(element)
+    })
 
   }
 }

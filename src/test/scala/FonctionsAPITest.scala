@@ -26,5 +26,4 @@ class FonctionsAPITest extends AnyFreeSpec{
       }
     }
   }
-
 }
